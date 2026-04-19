@@ -7,6 +7,17 @@ A aplicação é minimalista e não salva histórico de forma persistênte, por�
 
 https://github.com/user-attachments/assets/7fe3faaa-8891-4eb9-b46c-88dccf0aa7b8
 
+### Como executar
+
+Instale o arquivo `.jar` fornecido em `Releases` e certifique-se de que sua máquina possui um JRE (Java Runtime Environment).
+
+Agora, em um terminal, vá até o diretório em que o arquivo `.jar` está localizado e execute:
+```bash
+java -jar Timer.jar
+```
+
+A aplicação deve aparecer em poucos segundos.
+
 ### Classes
 
 Uma breve explicação de cada classe utilizada no projeto.
