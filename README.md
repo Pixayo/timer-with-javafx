@@ -1,7 +1,7 @@
 ## Sobre
 Um cronômetro simples, desenvolvido com o framework gráfico **JavaFX**.
 
-A aplicação é minimalista e não salva histórico de forma persistênte, porém, mantem um registro do último cronometro disparado em uma mesma sessão.
+A aplicação é minimalista e não salva histórico de forma persistente, porém, mantem um registro do último cronometro disparado em uma mesma sessão.
 
 ### Demonstração
 
@@ -24,7 +24,7 @@ Uma breve explicação de cada classe utilizada no projeto.
 
 #### App.java
 
-Onde é estruturado a interface da aplicação, assim como o controle dos botões.
+Onde é estruturada a interface da aplicação, assim como o controle dos botões.
 
 #### Timer.java
 
@@ -46,12 +46,12 @@ Ainda sinto que posso melhorar este projeto e, claro, estudar mais sobre a ferra
 
 Estes são alguns dos objetivos que tenho para finalizar neste projeto:
 
-- [ ] Move a interface explícita em código para um arquivo `.fxml`.
+- [ ] Mover a interface explícita em código para um arquivo `.fxml`.
 - [ ] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
-- [ ] Atalhos de teclado para iniciar / parar o cronômetro.
-- [ ] Implementar testes unitários.
-- [ ] Empacotar a aplicação para que possa ser distribuida como executável.
-- [ ] Menu de configuração contendo:
+- [ ] Implementar de teclado para iniciar / parar o cronômetro.
+- [ ] Desenvolver testes unitários.
+- [ ] Empacotar a aplicação para que possa ser distribuída como executável.
+- [ ] Criar menu de configuração contendo:
   - [ ] Switch para tema claro / escuro.
   - [ ] Permitir alterar a cor predominante (atual é laranja).
   - [ ] Permitir diferentes formatações de tempo.
