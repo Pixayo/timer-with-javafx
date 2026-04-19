@@ -48,7 +48,7 @@ Estes são alguns dos objetivos que tenho para finalizar neste projeto:
 
 - [ ] Mover a interface explícita em código para um arquivo `.fxml`.
 - [ ] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
-- [ ] Implementar de teclado para iniciar / parar o cronômetro.
+- [ ] Implementar atalhos de teclado para iniciar / parar o cronômetro.
 - [ ] Desenvolver testes unitários.
 - [ ] Empacotar a aplicação para que possa ser distribuída como executável.
 - [ ] Criar menu de configuração contendo:
