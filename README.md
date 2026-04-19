@@ -1,3 +1,4 @@
+
 ## Sobre
 Um cronômetro simples, desenvolvido com o framework gráfico **JavaFX**.
 
@@ -6,6 +7,8 @@ A aplicação é minimalista e não salva histórico de forma persistente, poré
 ### Demonstração
 
 https://github.com/user-attachments/assets/7fe3faaa-8891-4eb9-b46c-88dccf0aa7b8
+
+<img width="677" height="327" alt="demo" src="https://github.com/user-attachments/assets/1718102f-a807-44ae-a51d-f3111369e976" />
 
 ### Como executar
 
