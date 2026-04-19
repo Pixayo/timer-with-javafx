@@ -11,7 +11,7 @@ public class Timer extends AnimationTimer {
     private String timeText;
     private final Label label;
 
-    private String previusTimeText;
+    private String previousTimeText;
 
     private Instant startTime;
     private boolean isRunning = false;
@@ -30,7 +30,7 @@ public class Timer extends AnimationTimer {
     @Override
     public void stop() {
         super.stop();
-        previusTimeText = timeText;
+        previousTimeText = timeText;
         this.isRunning = false;
     }
 
@@ -67,11 +67,11 @@ public class Timer extends AnimationTimer {
         }
     }
 
-    public String getPreviusTimeText() {
-        if (previusTimeText != null) {
-            return previusTimeText;
+    public String getPreviousTimeText() {
+        if (previousTimeText != null) {
+            return previousTimeText;
         }
-        return "no previus time";
+        return "no previous time";
     }
 
     public boolean isRunning() {

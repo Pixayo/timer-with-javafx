@@ -22,11 +22,11 @@ public class App extends Application {
         Label timerLabel = new Label("00:00");
         timerLabel.setFont(Font.font("Monospaced", FontWeight.BOLD, 48));
 
-        Label previousTime = new Label("no previus time");
-        previousTime.setFont(Font.font("monospaced", FontWeight.LIGHT, 12));
-        previousTime.setStyle("-fx-text-fill: #A1A1A1");
-
         Timer timer = new Timer(timerLabel);
+
+        Label previousTimerLabel = new Label(timer.getPreviousTimeText());
+        previousTimerLabel.setFont(Font.font("monospaced", FontWeight.LIGHT, 12));
+        previousTimerLabel.setStyle("-fx-text-fill: #A1A1A1");
 
         Button btnStart = new Button("Start");
         btnStart.setPrefWidth(80);
@@ -40,7 +40,7 @@ public class App extends Application {
         btnStop.setPrefWidth(80);
         btnStop.setOnAction(e -> {
             timer.stop();
-            previousTime.setText(timer.getPreviusTimeText());
+            previousTimerLabel.setText(timer.getPreviousTimeText());
         });
 
         HBox buttonContainer = new HBox(15);
@@ -50,7 +50,7 @@ public class App extends Application {
         VBox mainLayout = new VBox(10); // 20px de espaçamento vertical
         mainLayout.setAlignment(Pos.CENTER);
         mainLayout.setPadding(new Insets(30)); // Margem interna
-        mainLayout.getChildren().addAll(timerLabel, previousTime, buttonContainer);
+        mainLayout.getChildren().addAll(timerLabel, previousTimerLabel, buttonContainer);
 
         StackPane root = new StackPane(mainLayout);
 
