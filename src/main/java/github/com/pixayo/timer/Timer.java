@@ -9,12 +9,11 @@ import java.time.Instant;
 public class Timer extends AnimationTimer {
 
     private String timeText;
-    private Label label;
+    private final Label label;
 
     private String previusTimeText;
 
     private Instant startTime;
-    private Instant endTime;
     private boolean isRunning = false;
 
     Timer(Label label) {
