@@ -5,6 +5,8 @@ A aplicação é minimalista e não salva histórico de forma persistênte, por�
 
 ### Demonstração
 
+https://github.com/user-attachments/assets/7fe3faaa-8891-4eb9-b46c-88dccf0aa7b8
+
 ### Classes
 
 Uma breve explicação de cada classe utilizada no projeto.
