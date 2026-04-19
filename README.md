@@ -40,3 +40,19 @@ Este projeto foi desenvolvido como um objeto de estudo do framework JavaFX e do 
 
 Dito isso, a aplicação não foi projetada para ser usada no cotidiano, mas se você procura por um app desktop simples e minimalista, este projeto pode o servir bem.
 
+### Checklist
+
+Ainda sinto que posso melhorar este projeto e, claro, estudar mais sobre a ferramenta com ele.
+
+Estes são alguns dos objetivos que tenho para finalizar neste projeto:
+
+- [ ] Move a interface explícita em código para um arquivo `.fxml`.
+- [ ] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
+- [ ] Atalhos de teclado para iniciar / parar o cronômetro.
+- [ ] Implementar testes unitários.
+- [ ] Empacotar a aplicação para que possa ser distribuida como executável.
+- [ ] Menu de configuração contendo:
+  - [ ] Switch para tema claro / escuro.
+  - [ ] Permitir alterar a cor predominante (atual é laranja).
+  - [ ] Permitir diferentes formatações de tempo.
+  - [ ] Permitir diferentes atalhos de teclado.
