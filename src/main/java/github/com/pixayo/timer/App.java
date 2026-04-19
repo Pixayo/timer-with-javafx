@@ -47,9 +47,9 @@ public class App extends Application {
         buttonContainer.setAlignment(Pos.CENTER);
         buttonContainer.getChildren().addAll(btnStart, btnStop);
 
-        VBox mainLayout = new VBox(10); // 20px de espaçamento vertical
+        VBox mainLayout = new VBox(20);
         mainLayout.setAlignment(Pos.CENTER);
-        mainLayout.setPadding(new Insets(30)); // Margem interna
+        mainLayout.setPadding(new Insets(30));
         mainLayout.getChildren().addAll(timerLabel, previousTimerLabel, buttonContainer);
 
         StackPane root = new StackPane(mainLayout);
