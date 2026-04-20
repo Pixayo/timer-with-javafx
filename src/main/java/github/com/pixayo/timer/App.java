@@ -29,9 +29,7 @@ public class App extends Application {
             }
         });
 
-        mainLayout.addButton("Stop", e -> {
-            timer.stop();
-        });
+        mainLayout.addButton("Stop", e -> timer.stop());
 
         StackPane.setAlignment(notificationBar, Pos.TOP_CENTER);
         root.getChildren().addAll(mainLayout, notificationBar);

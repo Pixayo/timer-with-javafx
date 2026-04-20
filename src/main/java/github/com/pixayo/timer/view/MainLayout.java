@@ -11,7 +11,7 @@ import javafx.scene.text.FontWeight;
 
 public class MainLayout extends VBox {
 
-    private final Label timerText = new Label("00:00");;
+    private final Label timerText = new Label("00:00");
     private final Label previousTimerText = new Label("no previous timer");
     private final ButtonContainer actions;
 
