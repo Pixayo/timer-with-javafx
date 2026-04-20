@@ -32,6 +32,7 @@ public class App extends Application {
         btnStart.setPrefWidth(80);
         btnStart.setOnAction(e -> {
             if (!timer.isRunning()) {
+                previousTimerLabel.setText(timer.getPreviousTimeText());
                 timer.start();
             }
         });
@@ -40,7 +41,6 @@ public class App extends Application {
         btnStop.setPrefWidth(80);
         btnStop.setOnAction(e -> {
             timer.stop();
-            previousTimerLabel.setText(timer.getPreviousTimeText());
         });
 
         HBox buttonContainer = new HBox(15);

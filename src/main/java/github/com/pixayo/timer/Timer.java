@@ -8,9 +8,8 @@ import java.time.Instant;
 
 public class Timer extends AnimationTimer {
 
-    private String timeText;
     private final Label label;
-
+    private String timeText;
     private String previousTimeText;
 
     private Instant startTime;
@@ -30,37 +29,40 @@ public class Timer extends AnimationTimer {
     @Override
     public void stop() {
         super.stop();
-        previousTimeText = timeText;
+        this.previousTimeText = this.timeText;
         this.isRunning = false;
     }
 
     @Override
     public void handle(long now) {
-        Instant current = Instant.now();
-        Duration elapsed = Duration.between(startTime, current);
+        try {
+            Instant current = Instant.now();
+            Duration elapsed = Duration.between(startTime, current);
 
-        long totalMillis = elapsed.toMillis();
-        long seconds = elapsed.toSeconds();
-        long minutes = elapsed.toMinutes();
-        long hours = elapsed.toHours();
+            long totalMillis = elapsed.toMillis();
+            long seconds = elapsed.toSeconds();
+            long minutes = elapsed.toMinutes();
+            long hours = elapsed.toHours();
 
-        formatTime(totalMillis, seconds, minutes, hours);
+            formatTime(totalMillis, seconds, minutes, hours);
 
-        label.setText(timeText);
+            label.setText(timeText);
+        } catch (ArithmeticException e) {
+            // POPUP
+        }
     }
 
     private void formatTime(long millis, long seconds, long minutes, long hours) {
-
         if (seconds < 60) {
             this.timeText = String.format("%02d:%02d",
                     seconds,
                     (millis % 1000) / 10);
         } else if (minutes < 60) {
-            this.timeText = String.format("%02d:%02d",
+            this.timeText = String.format("%02dm:%02ds",
                     minutes,
                     seconds % 60);
         } else {
-            this.timeText = String.format("%02d:%02d:%02d",
+            this.timeText = String.format("%02dh:%02dm:%02ds",
                     hours,
                     minutes % 60,
                     seconds % 60);
