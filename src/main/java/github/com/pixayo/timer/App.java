@@ -1,16 +1,11 @@
 package github.com.pixayo.timer;
 
+import github.com.pixayo.timer.view.MainLayout;
+import github.com.pixayo.timer.view.NotificationBar;
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,42 +14,28 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Label timerLabel = new Label("00:00");
-        timerLabel.setFont(Font.font("Monospaced", FontWeight.BOLD, 48));
 
-        Timer timer = new Timer(timerLabel);
+        StackPane root = new StackPane();
+        Scene scene = new Scene(root, 300, 250);
 
-        Label previousTimerLabel = new Label(timer.getPreviousTimeText());
-        previousTimerLabel.setFont(Font.font("monospaced", FontWeight.LIGHT, 12));
-        previousTimerLabel.setStyle("-fx-text-fill: #A1A1A1");
+        MainLayout mainLayout = new MainLayout(15);
+        NotificationBar notificationBar = NotificationBar.getInstance();
+        Timer timer = new Timer(mainLayout.getTimerText());
 
-        Button btnStart = new Button("Start");
-        btnStart.setPrefWidth(80);
-        btnStart.setOnAction(e -> {
+        mainLayout.addButton("Start", e -> {
             if (!timer.isRunning()) {
-                previousTimerLabel.setText(timer.getPreviousTimeText());
+                mainLayout.setPreviousTimerText(timer.getPreviousTimerText());
                 timer.start();
             }
         });
 
-        Button btnStop = new Button("Stop");
-        btnStop.setPrefWidth(80);
-        btnStop.setOnAction(e -> {
+        mainLayout.addButton("Stop", e -> {
             timer.stop();
         });
 
-        HBox buttonContainer = new HBox(15);
-        buttonContainer.setAlignment(Pos.CENTER);
-        buttonContainer.getChildren().addAll(btnStart, btnStop);
+        StackPane.setAlignment(notificationBar, Pos.TOP_CENTER);
+        root.getChildren().addAll(mainLayout, notificationBar);
 
-        VBox mainLayout = new VBox(20);
-        mainLayout.setAlignment(Pos.CENTER);
-        mainLayout.setPadding(new Insets(30));
-        mainLayout.getChildren().addAll(timerLabel, previousTimerLabel, buttonContainer);
-
-        StackPane root = new StackPane(mainLayout);
-
-        Scene scene = new Scene(root, 300, 200);
         scene.getStylesheets().add(
                 getClass().getResource("style.css").toExternalForm());
 

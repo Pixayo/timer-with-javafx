@@ -9,8 +9,8 @@ import java.time.Instant;
 public class Timer extends AnimationTimer {
 
     private final Label label;
-    private String timeText;
-    private String previousTimeText;
+    private String timerText;
+    private String previousTimerText;
 
     private Instant startTime;
     private boolean isRunning = false;
@@ -29,7 +29,7 @@ public class Timer extends AnimationTimer {
     @Override
     public void stop() {
         super.stop();
-        this.previousTimeText = this.timeText;
+        this.previousTimerText = this.timerText;
         this.isRunning = false;
     }
 
@@ -46,34 +46,35 @@ public class Timer extends AnimationTimer {
 
             formatTime(totalMillis, seconds, minutes, hours);
 
-            label.setText(timeText);
+            label.setText(timerText);
+
         } catch (ArithmeticException e) {
-            // POPUP
+            throw new AppNotificationException(e.getMessage());
         }
     }
 
     private void formatTime(long millis, long seconds, long minutes, long hours) {
         if (seconds < 60) {
-            this.timeText = String.format("%02d:%02d",
+            this.timerText = String.format("%02d:%02d",
                     seconds,
                     (millis % 1000) / 10);
         } else if (minutes < 60) {
-            this.timeText = String.format("%02dm:%02ds",
+            this.timerText = String.format("%02dm:%02ds",
                     minutes,
                     seconds % 60);
         } else {
-            this.timeText = String.format("%02dh:%02dm:%02ds",
+            this.timerText = String.format("%02dh:%02dm:%02ds",
                     hours,
                     minutes % 60,
                     seconds % 60);
         }
     }
 
-    public String getPreviousTimeText() {
-        if (previousTimeText != null) {
-            return previousTimeText;
+    public String getPreviousTimerText() {
+        if (previousTimerText != null) {
+            return previousTimerText;
         }
-        return "no previous time";
+        return "no previous timer";
     }
 
     public boolean isRunning() {
