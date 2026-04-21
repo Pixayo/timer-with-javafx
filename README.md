@@ -50,8 +50,7 @@ Ainda sinto que posso melhorar este projeto e, claro, estudar mais sobre a ferra
 Estes são alguns dos objetivos que tenho para finalizar neste projeto:
 
 - [ ] Mover a interface explícita em código para um arquivo `.fxml`.
-- [ ] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
-- [ ] Implementar atalhos de teclado para iniciar / parar o cronômetro.
+- [x] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
 - [ ] Desenvolver testes unitários.
 - [ ] Empacotar a aplicação para que possa ser distribuída como executável.
 - [ ] Criar menu de configuração contendo:

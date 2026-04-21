@@ -67,8 +67,6 @@ public class Timer extends AnimationTimer {
 
     public void reset() {
         timerText = "00:00";
-        previousTimerText = "No previous timer";
-
         label.setText(timerText);
     }
 

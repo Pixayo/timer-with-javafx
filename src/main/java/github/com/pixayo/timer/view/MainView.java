@@ -43,15 +43,24 @@ public class MainView implements ViewMaker {
         NotificationBar notificationBar = NotificationBar.getInstance();
 
         Button start = new Button("Start");
+        Button stop = new Button("Stop");
+
         start.setOnAction(e -> {
             if (!timer.isRunning()) {
                 previousTimerLabel.setText(timer.getPreviousTimerText());
+                stop.setText("Stop");
                 timer.start();
             }
         });
 
-        Button stop = new Button("Stop");
-        stop.setOnAction(e -> timer.stop());
+        stop.setOnAction(e -> {
+            if (timer.isRunning()) {
+                timer.stop();
+                stop.setText("Reset");
+            } else {
+                timer.reset();
+            }
+        });
 
         // Structure
         timerLabel.setFont(Font.font("Monospaced", FontWeight.BOLD, 48));
