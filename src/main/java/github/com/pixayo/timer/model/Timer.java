@@ -1,4 +1,4 @@
-package github.com.pixayo.timer.controller;
+package github.com.pixayo.timer.model;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.control.Label;
