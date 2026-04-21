@@ -13,7 +13,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-import github.com.pixayo.timer.controller.Timer;
+import github.com.pixayo.timer.model.Timer;
 
 public class MainView implements ViewMaker {
 

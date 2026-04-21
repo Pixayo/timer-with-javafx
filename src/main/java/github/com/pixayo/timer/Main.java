@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class Main extends Application {
 
-    private final Map<SceneName, Scene> scenes = new HashMap<>();
+    private static final Map<SceneName, Scene> scenes = new HashMap<>();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,5 +26,9 @@ public class Main extends Application {
         stage.setMinHeight(scenes.get(SceneName.MAIN).getHeight());
         stage.sizeToScene();
         stage.show();
+    }
+
+    public static Map<SceneName, Scene> getScenes() {
+        return scenes;
     }
 }
