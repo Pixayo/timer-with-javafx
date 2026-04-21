@@ -1,4 +1,4 @@
-package github.com.pixayo.timer;
+package github.com.pixayo.timer.controller;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.control.Label;
@@ -9,13 +9,13 @@ import java.time.Instant;
 public class Timer extends AnimationTimer {
 
     private final Label label;
-    private String timerText;
-    private String previousTimerText;
+    private String timerText = "00:00";
+    private String previousTimerText = "No previous timer";
 
     private Instant startTime;
     private boolean isRunning = false;
 
-    Timer(Label label) {
+    public Timer(Label label) {
         this.label = label;
     }
 
@@ -35,22 +35,17 @@ public class Timer extends AnimationTimer {
 
     @Override
     public void handle(long now) {
-        try {
-            Instant current = Instant.now();
-            Duration elapsed = Duration.between(startTime, current);
+        Instant current = Instant.now();
+        Duration elapsed = Duration.between(startTime, current);
 
-            long totalMillis = elapsed.toMillis();
-            long seconds = elapsed.toSeconds();
-            long minutes = elapsed.toMinutes();
-            long hours = elapsed.toHours();
+        long totalMillis = elapsed.toMillis();
+        long seconds = elapsed.toSeconds();
+        long minutes = elapsed.toMinutes();
+        long hours = elapsed.toHours();
 
-            formatTime(totalMillis, seconds, minutes, hours);
+        formatTime(totalMillis, seconds, minutes, hours);
 
-            label.setText(timerText);
-
-        } catch (ArithmeticException e) {
-            throw new AppNotificationException(e.getMessage());
-        }
+        label.setText(timerText);
     }
 
     private void formatTime(long millis, long seconds, long minutes, long hours) {
@@ -70,11 +65,15 @@ public class Timer extends AnimationTimer {
         }
     }
 
+    public void reset() {
+        timerText = "00:00";
+        previousTimerText = "No previous timer";
+
+        label.setText(timerText);
+    }
+
     public String getPreviousTimerText() {
-        if (previousTimerText != null) {
-            return previousTimerText;
-        }
-        return "no previous timer";
+        return previousTimerText;
     }
 
     public boolean isRunning() {

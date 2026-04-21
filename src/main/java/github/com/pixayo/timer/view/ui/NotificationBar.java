@@ -1,4 +1,4 @@
-package github.com.pixayo.timer.view;
+package github.com.pixayo.timer.view.ui;
 
 import javafx.animation.TranslateTransition;
 import javafx.geometry.Pos;
