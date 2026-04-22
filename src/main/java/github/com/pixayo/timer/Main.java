@@ -1,7 +1,7 @@
 package github.com.pixayo.timer;
 
 import github.com.pixayo.timer.model.SceneName;
-import github.com.pixayo.timer.view.MainView;
+import github.com.pixayo.timer.view.SceneFactory;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -17,8 +17,8 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        scenes.put(SceneName.MAIN, new MainView(stage).getScene());
-        // scenes.put(SceneName.SETTINGS, new SettingsView(stage).getScene());
+        scenes.put(SceneName.MAIN, SceneFactory.createScene(SceneName.MAIN));
+        // scenes.put(SceneName.SETTINGS, new SettingsView().getScene());
 
         stage.setTitle("Timer");
         stage.setScene(scenes.get(SceneName.MAIN));
