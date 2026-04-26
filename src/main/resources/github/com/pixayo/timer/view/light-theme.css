@@ -1,0 +1,48 @@
+.root {
+    -fx-background-color: #F9F9F9;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: #333333;
+}
+
+.button:hover {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-background-color: #d35400;
+    -fx-text-fill: white;
+}
+
+#settingsIcon {
+    -fx-image: url("assets/settings_light.png");
+}
+
+#backIcon {
+    -fx-image: url("assets/arrow_back_light.png");
+}
+
+.check-box .box {
+    -fx-border-color: #BBBBBB;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #e67e22;
+    -fx-border-color: #e67e22;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #888888;
+}
+
+.check-box:selected:hover .box {
+    -fx-background-color: #d35400;
+    -fx-border-color: #d35400;
+}

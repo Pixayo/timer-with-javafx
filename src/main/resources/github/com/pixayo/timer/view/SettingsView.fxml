@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="github.com.pixayo.timer.controller.SettingsViewController"
+           prefHeight="250.0"
+           prefWidth="300.0">
+
+    <VBox alignment="TOP_CENTER" spacing="15.0">
+
+        <padding>
+            <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT">
+            <Button fx:id="backButton"
+                    onAction="#handleBack"
+                    styleClass="icon-button"> <graphic>
+                <ImageView fx:id="backIcon"
+                           fitHeight="24.0"
+                           fitWidth="24.0"
+                           pickOnBounds="true"
+                           preserveRatio="true" />
+            </graphic>
+            </Button>
+        </HBox>
+
+
+        <HBox alignment="CENTER_LEFT">
+            <Label text="Dark mode" />
+            <Region HBox.hgrow="ALWAYS" />
+            <CheckBox fx:id="darkModeCheckbox" onAction="#handleDarkMode" selected="true"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <Label text="Hide previous timer display" />
+            <Region HBox.hgrow="ALWAYS" />
+            <CheckBox fx:id="disableLabelCheckbox" onAction="#handleDisableLabel"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

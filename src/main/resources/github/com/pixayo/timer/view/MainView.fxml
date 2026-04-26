@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
 
 <StackPane fx:id="root"
            prefHeight="250.0"
@@ -39,4 +40,21 @@
 
         </HBox>
     </VBox>
+
+    <Button fx:id="settingsButton"
+            onAction="#goToSettings"
+            StackPane.alignment="TOP_LEFT"
+            styleClass="icon-button"> <graphic>
+        <ImageView fx:id="settingsIcon"
+                   fitHeight="24.0"
+                   fitWidth="24.0"
+                   pickOnBounds="true"
+                   preserveRatio="true" />
+        </graphic>
+
+            <StackPane.margin>
+                <Insets left="15.0" top="15.0" />
+            </StackPane.margin>
+    </Button>
+
 </StackPane>

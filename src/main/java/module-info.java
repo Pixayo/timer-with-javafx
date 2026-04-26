@@ -1,6 +1,7 @@
 module github.com.pixayo.timer {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.prefs;
 
 
     opens github.com.pixayo.timer to javafx.fxml;
