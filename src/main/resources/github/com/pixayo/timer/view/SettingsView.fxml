@@ -40,12 +40,5 @@
             <CheckBox fx:id="darkModeCheckbox" onAction="#handleDarkMode" selected="true"/>
         </HBox>
 
-        <HBox alignment="CENTER_LEFT">
-            <Label text="Hide previous timer display" />
-            <Region HBox.hgrow="ALWAYS" />
-            <CheckBox fx:id="disableLabelCheckbox" onAction="#handleDisableLabel"/>
-        </HBox>
-
     </VBox>
-
 </StackPane>

@@ -1,3 +1,14 @@
+.label.timer {
+    -fx-font-size: 48;
+    -fx-font-family: 'Monospaced';
+    -fx-font-weight: bold;
+}
+
+.label.side-text {
+    -fx-font-size: 12;
+    -fx-font-family: 'Monospaced';
+}
+
 .button {
     -fx-background-radius: 5;
     -fx-padding: 10 20;

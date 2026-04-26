@@ -1,22 +1,27 @@
 .root {
-    -fx-background-color: #212121;
+    -fx-background-color: #282828;
 }
 
 .label {
-    -fx-text-fill: #F1F1F1;
+    -fx-text-fill: #ebdbb2;
+}
+
+.label.side-text {
+    -fx-text-fill: #928374;
 }
 
 .button {
-    -fx-background-color: #3d3d3d;
-    -fx-text-fill: white;
+    -fx-background-color: #3c3836;
+    -fx-text-fill: #ebdbb2;
 }
 
 .button:hover {
-    -fx-background-color: #e67e22;
+    -fx-background-color: #fe8019;
+    -fx-text-fill: #282828;
 }
 
 .button:pressed {
-    -fx-background-color: #d35400;
+    -fx-background-color: #d65d0e;
 }
 
 #settingsIcon {
@@ -28,19 +33,19 @@
 }
 
 .check-box .box {
-    -fx-border-color: #777777;
+    -fx-border-color: #a89984;
 }
 
 .check-box:selected .box {
-    -fx-background-color: #e67e22;
-    -fx-border-color: #e67e22;
+    -fx-background-color: #fe8019;
+    -fx-border-color: #fe8019;
 }
 
 .check-box:hover .box {
-    -fx-border-color: #aaaaaa;
+    -fx-border-color: #ebdbb2;
 }
 
 .check-box:selected:hover .box {
-    -fx-background-color: #d35400;
-    -fx-border-color: #d35400;
+    -fx-background-color: #d65d0e;
+    -fx-border-color: #d65d0e;
 }

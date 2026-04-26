@@ -16,7 +16,7 @@ public class SceneFactory {
             Region root = loader.load();
 
             Scene scene = new Scene(root);
-            ThemeManager.applyThemeGlobaly();
+            ThemeManager.applyThemeGlobally();
 
             return scene;
 

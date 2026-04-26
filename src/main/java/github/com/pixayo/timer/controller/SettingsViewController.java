@@ -18,8 +18,6 @@ public class SettingsViewController {
     @FXML
     public void initialize() {
         darkModeCheckbox.setSelected(Settings.isDarkMode());
-        disableLabelCheckbox.setSelected(Settings.isLabelDisabled());
-        System.out.println(Settings.isDarkMode());
     }
 
     @FXML
@@ -31,12 +29,6 @@ public class SettingsViewController {
     private void handleDarkMode(ActionEvent actionEvent) {
         boolean isDark = Settings.isDarkMode();
         Settings.setDarkMode(!isDark);
-        ThemeManager.applyThemeGlobaly();
-        System.out.println(isDark);
-    }
-
-    @FXML
-    private void handleDisableLabel(ActionEvent actionEvent) {
-        Settings.setLabelDisabled(!Settings.isLabelDisabled());
+        ThemeManager.applyThemeGlobally();
     }
 }

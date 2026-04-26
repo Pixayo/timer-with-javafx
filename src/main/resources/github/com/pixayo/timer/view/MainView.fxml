@@ -20,11 +20,11 @@
 
         <Label fx:id="timerLabel"
                text="00:00"
-               style="-fx-font-family: 'Monospaced'; -fx-font-weight: bold; -fx-font-size: 48;"
+               styleClass="timer"
         />
 
         <Label fx:id="previousTimerLabel"
-               style="-fx-font-family: 'Monospaced'; -fx-text-fill: #A1A1A1; -fx-font-size: 12;"
+               styleClass="side-text"
         />
 
         <HBox alignment="CENTER" spacing="15.0">

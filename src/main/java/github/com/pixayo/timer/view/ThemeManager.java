@@ -8,7 +8,7 @@ public class ThemeManager {
 
     private static final String stylefile = "style.css";
 
-    public static void applyThemeGlobaly() {
+    public static void applyThemeGlobally() {
         String themefile = Settings.isDarkMode() ? "dark-theme.css" : "light-theme.css";
 
         try {

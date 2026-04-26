@@ -23,7 +23,7 @@ public class App extends Application {
         scenes.put(SceneName.MAIN, SceneFactory.createScene(SceneName.MAIN));
         scenes.put(SceneName.SETTINGS, SceneFactory.createScene(SceneName.SETTINGS));
 
-        ThemeManager.applyThemeGlobaly();
+        ThemeManager.applyThemeGlobally();
 
         stage.setTitle("Timer");
         stage.setScene(scenes.get(SceneName.MAIN));

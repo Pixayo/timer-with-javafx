@@ -16,12 +16,4 @@ public class Settings {
     public static void setDarkMode(boolean isDark) {
         prefs.putBoolean(DARK_MODE_KEY, isDark);
     }
-
-    public static boolean isLabelDisabled() {
-        return prefs.getBoolean(DISABLE_LABEL_KEY, false);
-    }
-
-    public static void setLabelDisabled(boolean isDisabled) {
-        prefs.putBoolean(DISABLE_LABEL_KEY, isDisabled);
-    }
 }
