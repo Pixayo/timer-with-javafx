@@ -21,37 +21,8 @@ java -jar Timer.jar
 
 A aplicação deve aparecer em poucos segundos.
 
-### Classes
-
-Uma breve explicação de cada classe utilizada no projeto.
-
-#### App.java
-
-Onde é estruturada a interface da aplicação, assim como o controle dos botões.
-
-#### Timer.java
-
-Classe especializada, herda a classe abstrata `AnimationTimer` do pacote `javafx.animation`. Define toda a lógica do cronometro, tendo atributos internos que armazenam o estado atual (`running`) e a formatação do tempo em `strings`.
-
-#### Launcher.java
-
-Classe principal, ponto de entrada da aplicação. Necessária para a criação do executável `.jar`, pois o JavaFX não faz parte do JDK padrão desde o Java 9.
-
 ### Objetivo
 
 Este projeto foi desenvolvido como um objeto de estudo do framework JavaFX e do gerenciamento de ciclos de vida de aplicações gráficas.
 
 Dito isso, a aplicação não foi projetada para ser usada no cotidiano, mas se você procura por um app desktop simples e minimalista, este projeto pode o servir bem.
-
-### Checklist
-
-Ainda sinto que posso melhorar este projeto e, claro, estudar mais sobre a ferramenta com ele.
-
-Estes são alguns dos objetivos que tenho para finalizar neste projeto:
-
-- [x] Adicionar um botão que reseta o cronômetro, assim como o registro anterior.
-- [ ] Desenvolver testes unitários.
-- [ ] Empacotar a aplicação para que possa ser distribuída como executável.
-- [ ] Criar menu de configuração contendo:
-  - [ ] Switch para tema claro / escuro.
-  - [ ] Permitir alterar a cor predominante (atual é laranja).
